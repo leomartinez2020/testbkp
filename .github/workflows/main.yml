@@ -12,5 +12,6 @@ jobs:
           node-version: '16'
       - name: Install cypress and deps
         run: npm install cypress@latest
+      - name: Run tests
         run: npm run test
       
