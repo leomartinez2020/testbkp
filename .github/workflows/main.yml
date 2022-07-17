@@ -10,8 +10,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-      - name: Install cypress and deps
+      - name: Install cypress
         run: npm install cypress@latest
+      - name: Install linter
+        run: npm install eslint --save-dev
+      - name: Install linter cypress
+        run: npm install eslint-plugin-cypress --save-dev
+      - name: Run lint
+        run: npm run lint
       - name: Run tests
         run: npm run test
       
